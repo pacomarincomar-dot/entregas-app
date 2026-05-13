@@ -47,6 +47,7 @@ var DEFAULT_MSGS = [
 ];
 function loadMsgs(){try{return JSON.parse(localStorage.getItem(SK_MSGS)||"null")||DEFAULT_MSGS;}catch(e){return DEFAULT_MSGS;}}
 function saveMsgs(m){localStorage.setItem(SK_MSGS,JSON.stringify(m));}
+var ESTADOS=["Pendiente","En camino","Entregado","Fallido"];
 var EC={"Pendiente":{color:"#F59E0B",bg:"#FEF3C7",dot:"#F59E0B"},"En camino":{color:"#3B82F6",bg:"#DBEAFE",dot:"#3B82F6"},"Entregado":{color:"#10B981",bg:"#D1FAE5",dot:"#10B981"},"Fallido":{color:"#EF4444",bg:"#FEE2E2",dot:"#EF4444"}};
 var DRIVE_ID="1sRRC-CmIwVXjsliRWCMM0bcnEgC_hmF-";
 var SK_API="anthropic_api_key";
